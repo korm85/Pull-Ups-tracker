@@ -1,5 +1,5 @@
 body {
-    font-family: Arial, sans-serif;
+    font-family: 'Arial', sans-serif;
     background-color: #f0f0f0;
     margin: 0;
     padding: 0;
@@ -7,6 +7,7 @@ body {
     justify-content: center;
     align-items: center;
     height: 100vh;
+    color: #333;
 }
 
 .container {
@@ -16,40 +17,36 @@ body {
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     text-align: center;
     width: 90%;
-    max-width: 600px;
+    max-width: 800px;
     flex-grow: 1;
     display: flex;
     flex-direction: column;
     align-items: center;
 }
 
+header {
+    width: 100%;
+    text-align: left;
+    margin-bottom: 20px;
+}
+
 h1 {
     font-size: 24px;
-    margin-bottom: 20px;
+    margin-bottom: 10px;
+    color: #03DAC6;
 }
 
-.progress-bar {
-    height: 20px;
-    background-color: #e0e0e0;
-    border-radius: 10px;
-    overflow: hidden;
-    margin: 20px 0;
-    width: 100%;
+nav ul {
+    list-style-type: none;
+    padding: 0;
 }
 
-.progress-bar-fill {
-    height: 100%;
-    background-color: #03DAC6;
-    width: 0;
-    transition: width 0.3s, background-color 0.3s;
+nav ul li {
+    display: inline;
+    margin-right: 10px;
 }
 
-.total-reps {
-    margin-bottom: 20px;
-    width: 100%;
-}
-
-.complete-button {
+.nav-button {
     background-color: #03DAC6;
     color: white;
     padding: 10px 20px;
@@ -57,54 +54,24 @@ h1 {
     border: none;
     cursor: pointer;
     transition: background-color 0.3s;
-    width: 100%;
-    text-align: center;
-    margin: 5px 0;
+    text-decoration: none;
 }
 
-.complete-button:hover {
+.nav-button:hover {
     background-color: #018786;
 }
 
-.complete-button.completed {
-    background-color: #ff6b6b;
-    color: white;
+main {
+    width: 100%;
+    text-align: left;
+}
+
+.section {
+    margin-bottom: 20px;
 }
 
 .hidden {
     display: none;
-}
-
-.navigation-button {
-    background-color: #03DAC6;
-    color: white;
-    padding: 10px 20px;
-    border-radius: 28px;
-    border: none;
-    cursor: pointer;
-    transition: background-color 0.3s;
-    width: 100%;
-    text-align: center;
-    margin: 5px 0;
-}
-
-.navigation-button:hover {
-    background-color: #018786;
-}
-
-table {
-    width: 100%;
-    border-collapse: collapse;
-}
-
-th, td {
-    border: 1px solid #ddd;
-    padding: 8px;
-}
-
-th {
-    background-color: #f2f2f2;
-    text-align: left;
 }
 
 @media (max-width: 600px) {
@@ -123,15 +90,8 @@ th {
         font-size: 20px;
     }
 
-    .complete-button {
-        width: 100%;
-    }
-
-    .progress-bar {
-        width: 100%;
-    }
-
-    .total-reps {
-        width: 100%;
+    nav ul li {
+        display: block;
+        margin-bottom: 10px;
     }
 }

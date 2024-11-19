@@ -3,25 +3,47 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Pull-Ups Workout Tracker</title>
+    <title>Pull-Up Workout Tracker</title>
     <link rel="stylesheet" href="styles.css">
     <script defer src="app.js"></script>
     <link rel="manifest" href="manifest.json">
 </head>
 <body>
     <div class="container">
-        <h1>Workout Progress Tracker</h1>
-        <div id="workout-tracker"></div>
-        <div class="progress-bar">
-            <div id="progress-bar-fill" class="progress-bar-fill"></div>
-        </div>
-        <div class="total-reps">
-            <span>Total Reps Done: </span>
-            <span id="total-reps">0</span>
-        </div>
-        <button id="prev-workout" class="navigation-button">Previous Week</button>
-        <button id="next-workout" class="navigation-button hidden">Next Week</button>
-        <button id="save-workout" class="navigation-button">Save</button>
+        <header>
+            <h1>Pull-Up Workout Tracker</h1>
+            <nav>
+                <ul>
+                    <li><a href="#" class="nav-button" id="dashboard-button">Dashboard</a></li>
+                    <li><a href="#" class="nav-button" id="tracker-button">Tracker</a></li>
+                    <li><a href="#" class="nav-button" id="progress-button">Progress</a></li>
+                    <li><a href="#" class="nav-button" id="challenges-button">Challenges</a></li>
+                    <li><a href="#" class="nav-button" id="settings-button">Settings</a></li>
+                </ul>
+            </nav>
+        </header>
+        <main id="main-content">
+            <div id="dashboard" class="section hidden">
+                <h2>Dashboard</h2>
+                <p>Overview of pull-up stats, progress, and milestones.</p>
+            </div>
+            <div id="tracker" class="section hidden">
+                <h2>Tracker</h2>
+                <p>Log pull-up sessions, reps, and sets.</p>
+            </div>
+            <div id="progress" class="section hidden">
+                <h2>Progress</h2>
+                <p>Visualize trends like total reps, max sets, and progression over time.</p>
+            </div>
+            <div id="challenges" class="section hidden">
+                <h2>Challenges</h2>
+                <p>Track progress toward specific pull-up goals or milestones.</p>
+            </div>
+            <div id="settings" class="section hidden">
+                <h2>Settings</h2>
+                <p>Adjust preferences such as themes, units, and goal settings.</p>
+            </div>
+        </main>
     </div>
     <script>
         if ('serviceWorker' in navigator) {
