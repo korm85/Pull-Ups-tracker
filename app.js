@@ -72,6 +72,7 @@ document.addEventListener('DOMContentLoaded', () => {
         workoutTracker.appendChild(weekDiv);
 
         updateProgressBar(workoutPlan, currentWeekIndex);
+        document.getElementById('total-reps').textContent = '0';
     }
 
     function updateWorkoutPlan(workoutPlan, currentWeekIndex) {
@@ -130,5 +131,22 @@ document.addEventListener('DOMContentLoaded', () => {
         } else {
             alert('Congratulations! You have completed all workouts.');
         }
+    });
+
+    document.getElementById('prev-workout').addEventListener('click', () => {
+        currentWeekIndex--;
+        if (currentWeekIndex >= 0) {
+            displayWorkoutPlan(workoutPlan, currentWeekIndex);
+            localStorage.setItem('currentWeekIndex', currentWeekIndex); // Save the new week index
+        } else {
+            currentWeekIndex = 0;
+            displayWorkoutPlan(workoutPlan, currentWeekIndex);
+            localStorage.setItem('currentWeekIndex', currentWeekIndex); // Save the new week index
+        }
+    });
+
+    document.getElementById('save-workout').addEventListener('click', () => {
+        updateWorkoutPlan(workoutPlan, currentWeekIndex);
+        alert('Workout plan saved!');
     });
 });

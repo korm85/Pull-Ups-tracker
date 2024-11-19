@@ -18,6 +18,9 @@ body {
     width: 90%;
     max-width: 600px;
     flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 h1 {
@@ -70,6 +73,38 @@ h1 {
 
 .hidden {
     display: none;
+}
+
+.navigation-button {
+    background-color: #03DAC6;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 28px;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    width: 100%;
+    text-align: center;
+    margin: 5px 0;
+}
+
+.navigation-button:hover {
+    background-color: #018786;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+th, td {
+    border: 1px solid #ddd;
+    padding: 8px;
+}
+
+th {
+    background-color: #f2f2f2;
+    text-align: left;
 }
 
 @media (max-width: 600px) {
