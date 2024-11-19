@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 body {
     font-family: Arial, sans-serif;
     background-color: #f0f0f0;
@@ -65,3 +66,72 @@ h1 {
 .hidden {
     display: none;
 }
+=======
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.container {
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+h1 {
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+.progress-bar {
+    height: 20px;
+    background-color: #e0e0e0;
+    border-radius: 10px;
+    overflow: hidden;
+    margin: 20px 0;
+}
+
+.progress-bar-fill {
+    height: 100%;
+    background-color: #03DAC6;
+    width: 0;
+    transition: width 0.3s, background-color 0.3s;
+}
+
+.total-reps {
+    margin-bottom: 20px;
+}
+
+.complete-button {
+    background-color: #03DAC6;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 28px;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    width: 120px;
+    text-align: center;
+}
+
+.complete-button:hover {
+    background-color: #018786;
+}
+
+.complete-button.completed {
+    background-color: #ff6b6b;
+    color: white;
+}
+
+.hidden {
+    display: none;
+}
+>>>>>>> 820771c9634541779e8cb30501a1a1a25bb1446f
