@@ -62,7 +62,7 @@ document.addEventListener('DOMContentLoaded', () => {
             row.innerHTML = `
                 <td class="py-2 px-4 text-left">Set ${set.set}</td>
                 <td class="py-2 px-4 text-left">${set.reps} reps</td>
-                <td class="py-2 px-4 text-center"><button class="complete-button ${set.completed ? 'completed' : ''}" data-set="${set.set}">${set.completed ? 'Completed' : 'Complete'}</button></td>
+                <td class="py-2 px-4 text-center"><button class="complete-button ${set.completed ? 'completed-button' : ''}" data-set="${set.set}">${set.completed ? 'Completed' : 'Complete'}</button></td>
             `;
             tbody.appendChild(row);
         });
@@ -82,8 +82,8 @@ document.addEventListener('DOMContentLoaded', () => {
 
         buttons.forEach(button => {
             const setIndex = parseInt(button.getAttribute('data-set'), 10) - 1;
-            weekPlan.sets[setIndex].completed = button.classList.contains('completed');
-            if (button.classList.contains('completed')) {
+            weekPlan.sets[setIndex].completed = button.classList.contains('completed-button');
+            if (button.classList.contains('completed-button')) {
                 totalReps += weekPlan.sets[setIndex].reps;
             }
         });
@@ -117,8 +117,8 @@ document.addEventListener('DOMContentLoaded', () => {
 
     document.addEventListener('click', event => {
         if (event.target.classList.contains('complete-button')) {
-            event.target.classList.toggle('completed');
-            event.target.textContent = event.target.classList.contains('completed') ? 'Completed' : 'Complete';
+            event.target.classList.toggle('completed-button');
+            event.target.textContent = event.target.classList.contains('completed-button') ? 'Completed' : 'Complete';
             updateWorkoutPlan(workoutPlan, currentWeekIndex);
         }
     });
