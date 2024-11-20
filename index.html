@@ -5,30 +5,18 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Pull-Up Workout Tracker</title>
     <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
     <script defer src="app.js"></script>
     <link rel="manifest" href="manifest.json">
 </head>
 <body>
     <div class="container">
         <header>
-            <h1>Pull-Up Workout Tracker</h1>
-            <nav>
-                <ul>
-                    <li><a href="#" class="nav-button" id="dashboard-button">Dashboard</a></li>
-                    <li><a href="#" class="nav-button" id="tracker-button">Tracker</a></li>
-                    <li><a href="#" class="nav-button" id="progress-button">Progress</a></li>
-                    <li><a href="#" class="nav-button" id="challenges-button">Challenges</a></li>
-                    <li><a href="#" class="nav-button" id="settings-button">Settings</a></li>
-                </ul>
-            </nav>
+            <img src="icon.png" alt="Logo" class="logo">
+            <h1 class="stylish-header">Pullups Power</h1>
         </header>
         <main id="main-content">
-            <div id="dashboard" class="section hidden">
-                <h2>Dashboard</h2>
-                <p>Overview of pull-up stats, progress, and milestones.</p>
-            </div>
             <div id="tracker" class="section">
-                <h2>Tracker</h2>
                 <div id="workout-tracker"></div>
                 <div class="progress-bar">
                     <div id="progress-bar-fill" class="progress-bar-fill"></div>
@@ -37,21 +25,17 @@
                     <span>Total Reps Done: </span>
                     <span id="total-reps">0</span>
                 </div>
-                <button id="prev-workout" class="navigation-button">Previous Week</button>
-                <button id="next-workout" class="navigation-button hidden">Next Week</button>
-                <button id="save-workout" class="navigation-button">Save</button>
-            </div>
-            <div id="progress" class="section hidden">
-                <h2>Progress</h2>
-                <p>Visualize trends like total reps, max sets, and progression over time.</p>
-            </div>
-            <div id="challenges" class="section hidden">
-                <h2>Challenges</h2>
-                <p>Track progress toward specific pull-up goals or milestones.</p>
-            </div>
-            <div id="settings" class="section hidden">
-                <h2>Settings</h2>
-                <p>Adjust preferences such as themes, units, and goal settings.</p>
+                <div class="navigation-buttons">
+                    <button id="prev-workout" class="navigation-button">
+                        <span class="material-icons"></span> Previous Week
+                    </button>
+                    <button id="next-workout" class="navigation-button hidden">
+                        <span class="material-icons"></span> Next Week
+                    </button>
+                    <button id="save-workout" class="navigation-button">
+                        <span class="material-icons"></span> Save
+                    </button>
+                </div>
             </div>
         </main>
     </div>
