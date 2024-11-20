@@ -292,4 +292,23 @@ main {
         padding: 10px;
         font-size: 14px;
     }
+
+    .progress-bar {
+        width: 100%;
+        margin: 10px 0;
+    }
+
+    .total-reps {
+        margin: 10px 0;
+    }
+
+    .section {
+        margin-bottom: 10px;
+    }
+
+    .navigation-button {
+        width: 100%;
+        padding: 10px;
+        font-size: 14px;
+    }
 }
