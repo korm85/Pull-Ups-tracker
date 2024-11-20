@@ -143,25 +143,26 @@ main {
     margin-right: 8px;
 }
 
-/* New styles for the workout tracker table */
 #workout-tracker {
     width: 100%;
     overflow-x: auto;
     margin-bottom: 20px;
+    display: flex; /* Ensure horizontal scrolling */
+    flex-wrap: nowrap; /* Prevent wrapping */
 }
 
 #workout-tracker table {
     width: 100%;
     border-collapse: collapse;
     margin-bottom: 20px;
-    table-layout: fixed; /* Ensure consistent column widths */
+    table-layout: fixed;
 }
 
 #workout-tracker th, #workout-tracker td {
     border: 1px solid #ddd;
     padding: 8px;
     text-align: center;
-    word-wrap: break-word; /* Prevent text overflow */
+    word-wrap: break-word;
 }
 
 #workout-tracker th {
@@ -177,7 +178,6 @@ main {
     background-color: #ddd;
 }
 
-/* New styles for the action button */
 .action-button {
     background-color: #4CAF50;
     color: white;
@@ -206,126 +206,28 @@ main {
     box-shadow: 0 6px 10px rgba(0, 0, 0, 0.2);
 }
 
-/* New styles for the complete button */
-.complete-button {
-    background-color: #ff9800;
-    color: white;
-    padding: 10px 20px;
-    border: none;
-    border-radius: 28px;
-    cursor: pointer;
-    transition: background-color 0.3s, transform 0.2s;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    font-size: 14px;
-    font-weight: bold;
-    text-transform: uppercase;
-    letter-spacing: 1px;
-}
-
-.complete-button:hover {
-    background-color: #e68900;
-    transform: translateY(-2px);
-    box-shadow: 0 6px 8px rgba(0, 0, 0, 0.2);
-}
-
-.complete-button:active {
-    background-color: #cc7a00;
-    transform: translateY(0);
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
-}
-
-/* New styles for the completed button */
-.completed-button {
-    background-color: #4caf50;
-    color: white;
-    padding: 10px 20px;
-    border: none;
-    border-radius: 28px;
-    cursor: pointer;
-    transition: background-color 0.3s, transform 0.2s;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    font-size: 14px;
-    font-weight: bold;
-    text-transform: uppercase;
-    letter-spacing: 1px;
-}
-
-.completed-button:hover {
-    background-color: #45a049;
-    transform: translateY(-2px);
-    box-shadow: 0 6px 8px rgba(0, 0, 0, 0.2);
-}
-
-.completed-button:active {
-    background-color: #388e3c;
-    transform: translateY(0);
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
-}
-
+/* Ensure elements remain horizontal on smaller screens */
 @media (max-width: 600px) {
-    body {
-        flex-direction: column;
-        align-items: center;
-        padding: 20px;
+    .navigation-buttons {
+        flex-direction: row; /* Keep buttons horizontal */
+        gap: 5px; /* Adjust gap for smaller screens */
+    }
+
+    #workout-tracker {
+        flex-wrap: nowrap; /* Prevent wrapping */
+    }
+
+    #workout-tracker table {
+        width: 100%;
+        font-size: 14px; /* Adjust font size for smaller screens */
+    }
+
+    .navigation-button, .action-button, .complete-button {
+        width: auto; /* Prevent buttons from stretching to 100% */
     }
 
     .container {
         width: 100%;
         padding: 10px;
-    }
-
-    h1 {
-        font-size: 20px;
-    }
-
-    nav ul li {
-        display: block;
-        margin-bottom: 10px;
-    }
-
-    .navigation-buttons {
-        flex-direction: column;
-        align-items: center;
-    }
-
-    #workout-tracker table {
-        width: 100%;
-        font-size: 14px; /* Adjust font size for better scaling */
-    }
-
-    #workout-tracker th, #workout-tracker td {
-        padding: 6px; /* Adjust padding for better scaling */
-    }
-
-    .complete-button {
-        width: 100%;
-        padding: 10px;
-        font-size: 14px;
-        border-radius: 28px; /* Keep the border-radius for consistency */
-    }
-
-    .action-button {
-        width: 100%;
-        padding: 15px;
-        font-size: 14px;
-    }
-
-    .progress-bar {
-        width: 100%;
-        margin: 10px 0;
-    }
-
-    .total-reps {
-        margin: 10px 0;
-    }
-
-    .section {
-        margin-bottom: 10px;
-    }
-
-    .navigation-button {
-        width: 100%;
-        padding: 10px;
-        font-size: 14px;
     }
 }
